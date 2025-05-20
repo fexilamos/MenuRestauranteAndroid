@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Imagem de fundo -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/background"
+        android:scaleType="centerCrop"
+        android:contentDescription="Imagem de fundo"
+        android:alpha="0.85" />
+
+    <!-- Conteúdo scrollável por cima do fundo -->
+    <ScrollView
+        android:id="@+id/scrollResumo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="1dp">
+
+        <LinearLayout
+            android:id="@+id/layoutResumo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/txtTituloResumo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Resumo do Pedido"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor="#705D56"
+                android:layout_marginBottom="24dp" />
+
+            <ImageView
+                android:id="@+id/imgTonkatsu"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/tonkatsu"
+                android:visibility="gone"
+                android:layout_marginBottom="8dp" />
+
+            <ImageView
+                android:id="@+id/imgKatsu"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/katsu"
+                android:visibility="gone"
+                android:layout_marginBottom="8dp" />
+
+            <ImageView
+                android:id="@+id/imgOkonomiyaki"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/okonomiaki"
+                android:visibility="gone"
+                android:layout_marginBottom="8dp" />
+
+            <ImageView
+                android:id="@+id/imgGyudon"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/gyudon"
+                android:visibility="gone"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:id="@+id/txtResumo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="#5C4B51"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/txtTotal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#5C4B51"
+                android:layout_marginTop="16dp" />
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

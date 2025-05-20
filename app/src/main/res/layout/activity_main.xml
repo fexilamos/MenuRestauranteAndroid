@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Imagem de fundo -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/background"
+        android:scaleType="centerCrop"
+        android:contentDescription="Imagem de fundo"
+        android:alpha="0.85" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="1dp">
+
+        <LinearLayout
+            android:id="@+id/layoutMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Menu do Dia"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                android:textColor="#705D56"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Tonkatsu -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#FFE5D4"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/tonkatsu"
+                    android:scaleType="centerCrop"
+                    android:layout_marginEnd="16dp" />
+
+                <CheckBox
+                    android:id="@+id/Tonkastu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tonkatsu - €10"
+                    android:textSize="18sp"
+                    android:textColor="#5C4B51" />
+            </LinearLayout>
+
+            <!-- Katsu Sando -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#D8E2DC"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/katsu"
+                    android:scaleType="centerCrop"
+                    android:layout_marginEnd="16dp" />
+
+                <CheckBox
+                    android:id="@+id/checkKatsu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Katsu Sando - €10"
+                    android:textSize="18sp"
+                    android:textColor="#5C4B51" />
+            </LinearLayout>
+
+            <!-- Okonomiyaki -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#FCD5CE"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/okonomiaki"
+                    android:scaleType="centerCrop"
+                    android:layout_marginEnd="16dp" />
+
+                <CheckBox
+                    android:id="@+id/checkOkonomiyaki"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Okonomiyaki - €7"
+                    android:textSize="18sp"
+                    android:textColor="#5C4B51" />
+            </LinearLayout>
+
+            <!-- Gyudon -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#E2ECE9"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/gyudon"
+                    android:scaleType="centerCrop"
+                    android:layout_marginEnd="16dp" />
+
+                <CheckBox
+                    android:id="@+id/checkGyudon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gyudon - €15"
+                    android:textSize="18sp"
+                    android:textColor="#5C4B51" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnPedido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="#BACBDB"
+                android:backgroundTint="#A3C4F3"
+                android:paddingLeft="24dp"
+                android:paddingTop="2dp"
+                android:paddingRight="24dp"
+                android:paddingBottom="12dp"
+                android:text="Efectuar Pedido"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>
