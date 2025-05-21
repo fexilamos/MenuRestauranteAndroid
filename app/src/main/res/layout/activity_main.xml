@@ -51,13 +51,29 @@
                     android:scaleType="centerCrop"
                     android:layout_marginEnd="16dp" />
 
-                <CheckBox
-                    android:id="@+id/Tonkastu"
+                <LinearLayout
+                    android:orientation="vertical"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Tonkatsu - €10"
-                    android:textSize="18sp"
-                    android:textColor="#5C4B51" />
+                    android:layout_height="wrap_content">
+
+                    <CheckBox
+                        android:id="@+id/Tonkastu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tonkatsu - €10"
+                        android:textSize="18sp"
+                        android:textColor="#5C4B51" />
+
+                    <EditText
+                        android:id="@+id/quantidadeTonkatsu"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Qtd"
+                        android:inputType="number"
+                        android:enabled="false"
+                        android:padding="6dp"
+                        android:textColor="#000000" />
+                </LinearLayout>
             </LinearLayout>
 
             <!-- Katsu Sando -->
@@ -77,13 +93,29 @@
                     android:scaleType="centerCrop"
                     android:layout_marginEnd="16dp" />
 
-                <CheckBox
-                    android:id="@+id/checkKatsu"
+                <LinearLayout
+                    android:orientation="vertical"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Katsu Sando - €10"
-                    android:textSize="18sp"
-                    android:textColor="#5C4B51" />
+                    android:layout_height="wrap_content">
+
+                    <CheckBox
+                        android:id="@+id/checkKatsu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Katsu Sando - €10"
+                        android:textSize="18sp"
+                        android:textColor="#5C4B51" />
+
+                    <EditText
+                        android:id="@+id/quantidadeKatsu"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Qtd"
+                        android:inputType="number"
+                        android:enabled="false"
+                        android:padding="6dp"
+                        android:textColor="#000000" />
+                </LinearLayout>
             </LinearLayout>
 
             <!-- Okonomiyaki -->
@@ -103,13 +135,29 @@
                     android:scaleType="centerCrop"
                     android:layout_marginEnd="16dp" />
 
-                <CheckBox
-                    android:id="@+id/checkOkonomiyaki"
+                <LinearLayout
+                    android:orientation="vertical"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Okonomiyaki - €7"
-                    android:textSize="18sp"
-                    android:textColor="#5C4B51" />
+                    android:layout_height="wrap_content">
+
+                    <CheckBox
+                        android:id="@+id/checkOkonomiyaki"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Okonomiyaki - €7"
+                        android:textSize="18sp"
+                        android:textColor="#5C4B51" />
+
+                    <EditText
+                        android:id="@+id/quantidadeOkonomiyaki"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Qtd"
+                        android:inputType="number"
+                        android:enabled="false"
+                        android:padding="6dp"
+                        android:textColor="#000000" />
+                </LinearLayout>
             </LinearLayout>
 
             <!-- Gyudon -->
@@ -129,15 +177,32 @@
                     android:scaleType="centerCrop"
                     android:layout_marginEnd="16dp" />
 
-                <CheckBox
-                    android:id="@+id/checkGyudon"
+                <LinearLayout
+                    android:orientation="vertical"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Gyudon - €15"
-                    android:textSize="18sp"
-                    android:textColor="#5C4B51" />
+                    android:layout_height="wrap_content">
+
+                    <CheckBox
+                        android:id="@+id/checkGyudon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Gyudon - €15"
+                        android:textSize="18sp"
+                        android:textColor="#5C4B51" />
+
+                    <EditText
+                        android:id="@+id/quantidadeGyudon"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Qtd"
+                        android:inputType="number"
+                        android:enabled="false"
+                        android:padding="6dp"
+                        android:textColor="#000000" />
+                </LinearLayout>
             </LinearLayout>
 
+            <!-- Botão -->
             <Button
                 android:id="@+id/btnPedido"
                 android:layout_width="wrap_content"

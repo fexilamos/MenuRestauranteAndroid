@@ -19,31 +19,36 @@ class ResumoActivity : AppCompatActivity() {
         val resumo = StringBuilder()
         var total = 0
 
-        // Tonkatsu
-        if (intent.getBooleanExtra("tonkatsu", false)) {
-            resumo.append("Tonkatsu - €10\n")
-            total += 10
+        val qtdTonkatsu = intent.getIntExtra("qtdTonkatsu", 0)
+        val qtdKatsu = intent.getIntExtra("qtdKatsu", 0)
+        val qtdOkonomiyaki = intent.getIntExtra("qtdOkonomiyaki", 0)
+        val qtdGyudon = intent.getIntExtra("qtdGyudon", 0)
+
+        if (qtdTonkatsu > 0) {
+            val valor = qtdTonkatsu * 10
+            resumo.append("Tonkatsu x$qtdTonkatsu - €$valor\n")
+            total += valor
             binding.imgTonkatsu.visibility = View.VISIBLE
         }
 
-        // Katsu Sando
-        if (intent.getBooleanExtra("katsu", false)) {
-            resumo.append("Katsu Sando - €10\n")
-            total += 10
+        if (qtdKatsu > 0) {
+            val valor = qtdKatsu * 10
+            resumo.append("Katsu Sando x$qtdKatsu - €$valor\n")
+            total += valor
             binding.imgKatsu.visibility = View.VISIBLE
         }
 
-        // Okonomiyaki
-        if (intent.getBooleanExtra("okonomiyaki", false)) {
-            resumo.append("Okonomiyaki - €7\n")
-            total += 7
+        if (qtdOkonomiyaki > 0) {
+            val valor = qtdOkonomiyaki * 7
+            resumo.append("Okonomiyaki x$qtdOkonomiyaki - €$valor\n")
+            total += valor
             binding.imgOkonomiyaki.visibility = View.VISIBLE
         }
 
-        // Gyudon
-        if (intent.getBooleanExtra("gyudon", false)) {
-            resumo.append("Gyudon - €15\n")
-            total += 15
+        if (qtdGyudon > 0) {
+            val valor = qtdGyudon * 15
+            resumo.append("Gyudon x$qtdGyudon - €$valor\n")
+            total += valor
             binding.imgGyudon.visibility = View.VISIBLE
         }
 

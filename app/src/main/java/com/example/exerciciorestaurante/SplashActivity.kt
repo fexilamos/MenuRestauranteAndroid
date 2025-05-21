@@ -18,19 +18,12 @@ class SplashActivity : AppCompatActivity() {
         binding = ActivitySplashBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val tonkatsu = intent.getBooleanExtra("tonkatsu", false)
-        val katsu = intent.getBooleanExtra("katsu", false)
-        val okonomiyaki = intent.getBooleanExtra("okonomiyaki", false)
-        val gyudon = intent.getBooleanExtra("gyudon", false)
+        val extras = intent.extras
 
         Handler(Looper.getMainLooper()).postDelayed({
-            val nextIntent = Intent(this, ResumoActivity::class.java).apply {
-                putExtra("tonkatsu", tonkatsu)
-                putExtra("katsu", katsu)
-                putExtra("okonomiyaki", okonomiyaki)
-                putExtra("gyudon", gyudon)
-            }
-            startActivity(nextIntent)
+            val intent = Intent(this, ResumoActivity::class.java)
+            intent.putExtras(extras ?: Bundle())
+            startActivity(intent)
             finish()
         }, 4000)
     }
